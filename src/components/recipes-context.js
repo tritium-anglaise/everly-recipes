@@ -1,7 +1,7 @@
 import React, { useEffect, useState} from 'react';
 
-import { getValue, setValue } from './utilities/browserStorage';
-import { fetchDailyFive } from './utilities/API';
+import { getValue, setValue } from '../utilities/browserStorage';
+import { fetchDailyFive } from '../utilities/API';
 
 const loadFavorites = () => window.localStorage.getItem(['recipe-favorites']) || [];
 const RECIPES_DATE_KEY = 'dailyRecipesDate';

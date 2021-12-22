@@ -1,10 +1,10 @@
 import { useContext } from 'react';
 
-import { RecipesContext } from './recipes-context';
-import NavigationBar from './components/NavigationBar';
-import SearchBar from './components/SearchBar';
-import RecipeList from './components/RecipeList';
-import ResultsList from './components/ResultsList';
+import { RecipesContext } from '../recipes-context';
+import NavigationBar from '../NavigationBar';
+import SearchBar from '../SearchBar';
+import RecipeList from './RecipeList';
+import ResultsList from './ResultsList';
 
 function App() {
   const { dailyRecipes, searchResults } = useContext(RecipesContext);

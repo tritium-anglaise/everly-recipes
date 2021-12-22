@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 
 import PropTypes from 'prop-types';
 
-import { RecipesContext } from '../recipes-context';
+import { RecipesContext } from './recipes-context';
 import { fetchSearchResults } from '../utilities/API';
 
 const SearchInput = ({ inputRef }) => {

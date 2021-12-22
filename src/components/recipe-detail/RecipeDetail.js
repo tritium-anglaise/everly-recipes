@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 
-import { getValue, setValue } from '../utilities/browserStorage';
-import { fetchDetail } from '../utilities/API';
+import { getValue, setValue } from '../../utilities/browserStorage';
+import { fetchDetail } from '../../utilities/API';
 import RecipeIngredients from './RecipeIngredients';
-import NavigationBar from '../components/NavigationBar';
+import NavigationBar from '../NavigationBar';
 import FavoriteButton from './FavoriteButton';
 
 
