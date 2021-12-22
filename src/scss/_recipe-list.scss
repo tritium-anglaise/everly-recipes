@@ -1,0 +1,19 @@
+.recipe-list {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $mobile-break) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  &__link {
+    text-decoration: none;
+
+    @media (min-width: $mobile-break) {
+      flex-basis: 40%;
+    }
+  }
+}

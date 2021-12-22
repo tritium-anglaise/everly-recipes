@@ -1,0 +1,56 @@
+.search {
+  &__button {
+    appearance: none;
+    background-color: red;
+    border: none;
+    border-radius: 50%;
+    bottom: 2%;
+    box-shadow: 0 12px 20px #444;
+    color: white;
+    cursor: pointer;
+    float: right;
+    font-size: 1.7rem;
+    height: 70px;
+    padding: 0;
+    position: sticky;
+    right: 2%;
+    width: 70px;
+    z-index: 1;
+
+    @media (min-width: $mobile-break) {
+      display: none;
+    }
+  }
+
+  &__input {
+    appearance: none;
+    background: transparent;
+    border: solid 1px #666666;
+    border-radius: 3px;
+    display: flex;
+    font-size: 1rem;
+    margin: 0 auto;
+    padding: 8px 20px;
+    transition: background-color $animation-duration;
+
+    &:focus {
+      background: white;
+      outline: none;
+    }
+
+    &::placeholder {
+      color: #cacaca;
+      text-align: center;
+    }
+
+    &--clear {
+      display: block;
+      color: white;
+      cursor: pointer;
+      font-size: 1.7rem;
+      left: 8px;
+      position: relative;
+      top: 4px;
+    }
+  }
+}

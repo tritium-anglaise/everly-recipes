@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import { useContext } from 'react';
+
+import { RecipesContext } from './recipes-context';
+import NavigationBar from './components/NavigationBar';
+import SearchBar from './components/SearchBar';
+import RecipeList from './components/RecipeList';
+import ResultsList from './components/ResultsList';
 
 function App() {
+  const { dailyRecipes, searchResults } = useContext(RecipesContext);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <NavigationBar>
+        <SearchBar />
+      </NavigationBar>
+        {!searchResults &&
+          <>
+            <div title="EverlyHealth Recipe Browser" className="home-page__container--top" role="presentation" />
+            <h4 className="home-page__subhead">Recipes of the Day</h4>
+            <RecipeList recipes={dailyRecipes} />
+          </>
+        }
+        {searchResults && <ResultsList results={searchResults} />}
+    </>
   );
 }
 

@@ -1,0 +1,21 @@
+$animation-duration: 300ms;
+$mobile-break: 768px;
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  margin: 0 auto;
+  max-width: 1024px;
+  padding: 0 0 20px 0;
+}
+
+// screens
+@import "home-page";
+@import "recipe-detail";
+
+// components
+@import "FavoriteButton";
+@import "navigation-bar";
+@import "recipe-card";
+@import "recipe-list";
+@import "result-list";
+@import "search";

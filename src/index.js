@@ -1,12 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+
+import './scss/main.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import RecipeDetail from './recipe-detail/RecipeDetail';
+import { RecipesProvider } from './recipes-context';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <RecipesProvider>
+        <Routes>
+          <Route path="/" element={<App />} />
+          <Route path="/detail/:detailId" element={<RecipeDetail />} />
+        </Routes>
+      </RecipesProvider>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );

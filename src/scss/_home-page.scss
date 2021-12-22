@@ -1,0 +1,32 @@
+.home-page {
+  &__container {
+    &--top {
+      background-image: url("../../public/home-background.jpg");
+      background-position: 75%;
+      background-size: cover;
+      height: 300px;
+      position: relative;
+
+      &:before {
+        background-image: url("../../public/logo.png");
+        background-size: cover;
+        content: '';
+        display: block;
+        height: 110px;
+        margin: 0 auto;
+        position: relative;
+        top: 30%;
+        width: 100px;
+      }
+    }
+  }
+
+  &__subhead {
+    color: slategray;
+    font-size: 1.4rem;
+    font-style: italic;
+    font-weight: normal;
+    margin: 40px 0 10px 0;
+    text-align: center;
+  }
+}
